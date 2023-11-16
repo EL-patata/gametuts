@@ -16,11 +16,7 @@ const Providers: FC<Props> = ({ children }) => {
 		trpc.createClient({
 			links: [
 				httpBatchLink({
-					url: `${
-						env === 'development'
-							? process.env.NEXT_PUBLIC_DEV_BASE_URL!
-							: process.env.NEXT_PUBLIC_BUILD_BASE_URL!
-					}/api/trpc`,
+					url: `${process.env.NEXT_PUBLIC_DEV_BASE_URL!}/api/trpc`,
 				}),
 			],
 		})
