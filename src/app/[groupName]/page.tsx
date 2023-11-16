@@ -13,10 +13,6 @@ import NoResults from '@/components/NoResults';
 const Page = () => {
 	const params = useParams();
 
-	const { data: group } = trpc.getGroup.useQuery({
-		name: params.groupName as string,
-	});
-
 	const { data, isLoading, fetchNextPage, error } =
 		trpc.getGroupPosts.useInfiniteQuery(
 			{
@@ -57,12 +53,7 @@ const Page = () => {
 					)}
 				</ul>
 			}
-			RightAside={
-				<GroupSideSection
-					groupName={group?.name as string}
-					groupDescription={group?.description as string}
-				/>
-			}
+			RightAside={<GroupSideSection groupName={params.groupName as string} />}
 		/>
 	);
 };

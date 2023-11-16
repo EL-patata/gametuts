@@ -8,9 +8,13 @@ import { trpc } from '@/app/_trpc/client';
 import { UserPlus } from 'lucide-react';
 import { toast } from '../ui/use-toast';
 
-type Props = { groupName: string; groupDescription: string };
+type Props = { groupName: string };
 
-const GroupSideSection: FC<Props> = ({ groupName, groupDescription }) => {
+const GroupSideSection: FC<Props> = ({ groupName }) => {
+	const { data: group } = trpc.getGroup.useQuery({
+		name: groupName,
+	});
+
 	const {
 		data: subscription,
 		isLoading: isStatusLoading,
@@ -29,7 +33,7 @@ const GroupSideSection: FC<Props> = ({ groupName, groupDescription }) => {
 	return (
 		<SideCard>
 			<h1 className="font-bold text-2xl text-center">{groupName}</h1>
-			<p className="text-muted-foreground text-center">{groupDescription}</p>
+			<p className="text-muted-foreground text-center">{group?.description}</p>
 			{!isStatusLoading && subscription?.subscription ? (
 				<Link
 					href={`/${groupName}/post`}

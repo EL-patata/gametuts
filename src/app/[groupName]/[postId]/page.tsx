@@ -6,7 +6,6 @@ import GroupSideSection from '@/components/group/GroupSideSection';
 import MainView from '@/components/MainView';
 import PostLoading from '@/components/posts/PostLoading';
 import Voting from '@/components/posts/Voting';
-import { Skeleton } from '@/components/ui/skeleton';
 import { formatTimeToNow } from '@/lib/utils';
 import { useParams } from 'next/navigation';
 import { FC } from 'react';
