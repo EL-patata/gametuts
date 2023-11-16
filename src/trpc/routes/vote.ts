@@ -67,25 +67,21 @@ export const vote = privateProcedure
 
 				if (confirmedVote.type === type) return { confirmedVote };
 				else {
-					try {
-						const updatedVote = await db.vote.update({
-							where: {
-								userId_postId: {
-									postId,
-									userId,
-								},
+					const updatedVote = await db.vote.update({
+						where: {
+							userId_postId: {
+								postId,
+								userId,
 							},
-							data: {
-								type,
-							},
-						});
+						},
+						data: {
+							type,
+						},
+					});
 
-						confirmedVote = updatedVote;
+					confirmedVote = updatedVote;
 
-						return { confirmedVote };
-					} catch (error) {
-						console.log(error);
-					}
+					return { confirmedVote };
 				}
 			}
 		}

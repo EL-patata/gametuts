@@ -60,8 +60,6 @@ const AddComment: FC<Props> = ({ postId, refetchComments }) => {
 		replyToId,
 		commentId,
 	}: AddCommentSchemaType) {
-		console.log('hi');
-
 		addComment({ comment, postId, replyToId, commentId });
 	}
 
