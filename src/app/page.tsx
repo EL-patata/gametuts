@@ -9,8 +9,8 @@ import { POST_QUERY_LIMIT } from '@/lib/post-query-limit';
 import { useIntersection } from '@mantine/hooks';
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { AiOutlineUsergroupAdd } from 'react-icons/ai';
 import { trpc } from './_trpc/client';
+import { TbUsersPlus } from 'react-icons/tb';
 
 export default function Home() {
 	const { ref, entry } = useIntersection({ threshold: 0.1 });
@@ -51,7 +51,7 @@ export default function Home() {
 				<>
 					<SideCard>
 						<h1 className="font-bold flex items-center gap-1 text-2xl">
-							<AiOutlineUsergroupAdd className="w-8 h-8" /> Create group
+							<TbUsersPlus className="w-8 h-8" /> Create group
 						</h1>
 						<Link href={`/creategroup`} className={buttonVariants()}>
 							Create a group from here

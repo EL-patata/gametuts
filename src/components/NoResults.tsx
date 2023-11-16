@@ -2,7 +2,7 @@
 import { buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
 import { FC } from 'react';
-import { AiOutlineHome } from 'react-icons/ai';
+import { IoHomeOutline } from 'react-icons/io5';
 
 type Props = {};
 
@@ -17,7 +17,7 @@ const NoResults: FC<Props> = ({}) => {
 				Nothing was found.
 			</p>
 			<Link href={`/`} className={buttonVariants()}>
-				Return to homepage <AiOutlineHome className="ml-4 w-6 h-6" />
+				Return to homepage <IoHomeOutline className="ml-4 w-6 h-6" />
 			</Link>
 		</main>
 	);

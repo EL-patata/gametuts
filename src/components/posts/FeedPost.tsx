@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { forwardRef, useRef } from 'react';
 import EditorOutput from '../editor-js/EditorOutput';
 import Voting from './Voting';
-import { BiComment } from 'react-icons/bi';
+import { FaRegCommentAlt } from 'react-icons/fa';
 
 type Props = { post: FeedPostType };
 
@@ -52,7 +52,7 @@ const FeedPost = forwardRef<HTMLLIElement, Props>(({ post }, ref) => {
 					) : null}
 				</section>
 				<p className="font-semibold max-[767px]:mx-auto flex mt-8 gap-2 justify-start rounded w-fit items-center p-2 bg-accent/50">
-					<BiComment className="w-6 h-6" />
+					<FaRegCommentAlt className="w-6 h-6" />
 					{post.comments.length}
 				</p>
 			</section>

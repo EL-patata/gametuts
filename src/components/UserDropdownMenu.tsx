@@ -17,7 +17,7 @@ import { SignOutButton } from '@clerk/nextjs';
 import { LogOut } from 'lucide-react';
 import Link from 'next/link';
 import { FC } from 'react';
-import { AiOutlineUsergroupAdd } from 'react-icons/ai';
+import { TbUsersPlus } from 'react-icons/tb';
 import { BiColorFill } from 'react-icons/bi';
 import ThemeChanger from './ThemeChanger';
 import { Avatar, AvatarImage } from './ui/avatar';
@@ -96,7 +96,7 @@ const UserDropdownMenu: FC<Props> = ({ user }) => {
 								href={`creategroup`}
 								className="flex items-center gap-2 w-full"
 							>
-								<AiOutlineUsergroupAdd className="w-4 h-4" />
+								<TbUsersPlus className="w-4 h-4" />
 								Create group
 							</Link>
 						</DropdownMenuItem>
