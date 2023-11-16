@@ -36,6 +36,7 @@
 		"@trpc/react-query": "^10.38.5",
 		"@trpc/server": "^10.38.5",
 		"@uploadthing/react": "^5.7.0",
+		"axios": "^1.6.2",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.0.0",
 		"cmdk": "^0.2.0",
