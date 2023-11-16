@@ -2,26 +2,393 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+	:root {
+		--radius: 0.5rem;
+	}
+	.rose {
+		--background: 20 14.3% 4.1%;
+		--foreground: 0 0% 95%;
+		--card: 24 9.8% 10%;
+		--card-foreground: 0 0% 95%;
+		--popover: 0 0% 9%;
+		--popover-foreground: 0 0% 95%;
+		--primary: 346.8 77.2% 49.8%;
+		--primary-foreground: 355.7 100% 97.3%;
+		--secondary: 240 3.7% 15.9%;
+		--secondary-foreground: 0 0% 98%;
+		--muted: 0 0% 15%;
+		--muted-foreground: 240 5% 64.9%;
+		--accent: 12 6.5% 15.1%;
+		--accent-foreground: 0 0% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 85.7% 97.3%;
+		--border: 240 3.7% 15.9%;
+		--input: 240 3.7% 15.9%;
+		--ring: 346.8 77.2% 49.8%;
+	}
+	.blue {
+		--background: 220 65% 3.52%;
+		--foreground: 220 10% 97.2%;
+
+		--muted: 220 50% 13.2%;
+		--muted-foreground: 220 10% 54.4%;
+
+		--popover: 220 45% 5.72%;
+		--popover-foreground: 220 10% 97.2%;
+
+		--card: 220 45% 5.72%;
+		--card-foreground: 220 10% 97.2%;
+
+		--border: 220 50% 13.2%;
+		--input: 220 50% 13.2%;
+
+		--primary: 220 100% 44%;
+		--primary-foreground: 220 10% 97.2%;
+
+		--secondary: 220 50% 13.2%;
+		--secondary-foreground: 220 10% 97.2%;
+
+		--accent: 220 50% 13.2%;
+		--accent-foreground: 220 10% 97.2%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 220 10% 97.2%;
+
+		--ring: 220 100% 44%;
+	}
+
+	.goldpurple {
+		--background: 290 43.550000000000004% 3.2%;
+		--foreground: 290 6.7% 97%;
+
+		--muted: 290 33.5% 12%;
+		--muted-foreground: 290 6.7% 54%;
+
+		--popover: 290 51.6% 5.2%;
+		--popover-foreground: 290 6.7% 97%;
+
+		--card: 290 51.6% 5.2%;
+		--card-foreground: 290 6.7% 97%;
+
+		--border: 290 33.5% 12%;
+		--input: 290 33.5% 12%;
+
+		--primary: 38 92% 50%;
+		--primary-foreground: 290 6.7% 97%;
+
+		--secondary: 290 33.5% 12%;
+		--secondary-foreground: 290 6.7% 97%;
+
+		--accent: 290 33.5% 12%;
+		--accent-foreground: 290 6.7% 97%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 290 6.7% 97%;
+
+		--ring: 38 92% 50%;
+	}
+
+	.pink {
+		--background: -38 65% 3.68%;
+		--foreground: -38 10% 97.3%;
+
+		--muted: -38 50% 13.8%;
+		--muted-foreground: -38 10% 54.6%;
+
+		--popover: -38 45% 5.98%;
+		--popover-foreground: -38 10% 97.3%;
+
+		--card: -38 45% 5.98%;
+		--card-foreground: -38 10% 97.3%;
+
+		--border: -38 50% 13.8%;
+		--input: -38 50% 13.8%;
+
+		--primary: -38 100% 46%;
+		--primary-foreground: -38 10% 97.3%;
+
+		--secondary: -38 50% 13.8%;
+		--secondary-foreground: -38 10% 97.3%;
+
+		--accent: -38 50% 13.8%;
+		--accent-foreground: -38 10% 97.3%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: -38 10% 97.3%;
+
+		--ring: -38 100% 46%;
+	}
+
+	.green {
+		--background: 172 56.55% 7.52%;
+		--foreground: 172 8.7% 99.7%;
+
+		--muted: 172 43.5% 28.2%;
+		--muted-foreground: 172 8.7% 59.4%;
+
+		--popover: 172 47.6% 12.219999999999999%;
+		--popover-foreground: 172 8.7% 99.7%;
+
+		--card: 172 47.6% 12.219999999999999%;
+		--card-foreground: 172 8.7% 99.7%;
+
+		--border: 172 43.5% 28.2%;
+		--input: 172 43.5% 28.2%;
+
+		--primary: 172 87% 94%;
+		--primary-foreground: 172 8.7% 9.399999999999999%;
+
+		--secondary: 172 43.5% 28.2%;
+		--secondary-foreground: 172 8.7% 99.7%;
+
+		--accent: 172 43.5% 28.2%;
+		--accent-foreground: 172 8.7% 99.7%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 172 8.7% 99.7%;
+
+		--ring: 172 87% 94%;
+	}
+
+	.white {
+		--background: 0 0% 100%;
+		--foreground: 20 14.3% 4.1%;
+		--card: 0 0% 100%;
+		--card-foreground: 20 14.3% 4.1%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 20 14.3% 4.1%;
+		--primary: 24.6 95% 53.1%;
+		--primary-foreground: 60 9.1% 97.8%;
+		--secondary: 60 4.8% 95.9%;
+		--secondary-foreground: 24 9.8% 10%;
+		--muted: 60 4.8% 95.9%;
+		--muted-foreground: 25 5.3% 44.7%;
+		--accent: 60 4.8% 95.9%;
+		--accent-foreground: 24 9.8% 10%;
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 60 9.1% 97.8%;
+		--border: 20 5.9% 90%;
+		--input: 20 5.9% 90%;
+		--ring: 24.6 95% 53.1%;
+	}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@layer base {
+	* {
+		@apply border-border;
+		color-scheme: dark;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+*::-webkit-scrollbar {
+	@apply w-2;
+}
+
+*::-webkit-scrollbar-track {
+	@apply w-2 px-3 bg-background;
+}
+
+*::-webkit-scrollbar-thumb {
+	@apply bg-primary rounded-full hover:bg-primary/90 transition-all active:bg-primary/80;
+}
+
+#editor {
+	@apply bg-background text-foreground;
+}
+
+.cdx-search-field {
+	@apply bg-accent;
+}
+
+.ct--shown {
+	@apply text-black;
+}
+
+*::selection {
+	@apply bg-blue-600 text-white !important;
+}
+
+.cdx-search-field svg {
+	@apply text-primary fill-background;
+}
+
+.cdx-search-field input::placeholder {
+	@apply text-muted-foreground;
+}
+
+.ce-toolbar__plus {
+	@apply text-foreground bg-transparent border border-border;
+}
+
+.ce-toolbar__plus:hover {
+	@apply hover:bg-accent transition-colors;
+}
+
+.ce-toolbar__settings-btn {
+	@apply text-foreground bg-transparent border border-border;
+}
+
+.ce-toolbar__settings-btn:hover {
+	@apply hover:bg-accent transition-colors;
+}
+
+.ce-popover--opened {
+	@apply text-foreground bg-background;
+}
+
+.ce-popover-item {
+	@apply text-foreground;
+}
+
+.ce-popover-item__icon {
+	@apply bg-accent outline outline-1 outline-primary;
+}
+
+.ce-popover-item:hover {
+	@apply hover:bg-accent transition-[background-color];
+}
+
+.ce-block--focused .ce-block--selected {
+	@apply bg-accent;
+}
+
+.ce-block--selected .ce-block__content {
+	@apply bg-accent;
+}
+
+.ce-popover-item--focused {
+	--color-background-item-focus: hsl(var(--accent));
+}
+
+.ce-inline-toolbar {
+	@apply bg-background border-border;
+}
+
+.ce-inline-tool {
+	@apply w-8 h-8 aspect-square;
+}
+
+.ce-inline-tool:hover {
+	@apply hover:bg-accent;
+}
+
+.ce-inline-tool--active {
+	@apply bg-primary text-white;
+}
+
+.ce-inline-tool--active:hover {
+	@apply hover:bg-primary;
+}
+
+.ce-inline-toolbar__dropdown:hover {
+	@apply bg-accent;
+}
+
+.ce-conversion-toolbar--showed {
+	@apply bg-background text-foreground p-1;
+}
+
+.ce-conversion-tool {
+	@apply rounded;
+}
+
+.ce-conversion-tool:hover {
+	@apply transition-colors bg-accent;
+}
+
+.ce-conversion-tool--focused {
+	@apply bg-accent !important;
+}
+
+.ce-conversion-tool__icon {
+	@apply text-foreground bg-accent outline-primary outline outline-1;
+}
+
+.ct__content,
+.ce-toolbar__plus-shortcut {
+	@apply text-foreground !important;
+}
+.ct::before {
+	@apply bg-accent border-[1.5px]  border-primary rounded-lg;
+}
+.ct--top::after {
+	@apply bg-accent border-primary border-l border-b;
+}
+.ct--bottom::after {
+	@apply bg-accent border-primary border-r border-t;
+}
+
+.theme-circle {
+	background-image: linear-gradient(
+		135deg,
+		hsl(var(--primary)) 0%,
+		hsl(var(--primary)) 50%,
+		hsl(var(--accent)) 50%,
+		hsl(var(--accent)) 100%
+	);
+	@apply outline outline-slate-400;
+}
+
+.cl-card {
+	@apply bg-background border-border;
+}
+
+.cl-dividerRow {
+	@apply bg-accent rounded-sm;
+}
+
+.cl-footerActionText,
+.cl-identityPreviewText,
+.cl-headerSubtitle,
+.cl-formFieldInput,
+.cl-formFieldLabel,
+.cl-dividerText,
+.cl-headerTitle {
+	@apply text-foreground;
+}
+
+.cl-footerActionLink,
+.cl-formFieldAction,
+.cl-formFieldInputShowPasswordButton {
+	@apply text-primary hover:text-primary;
+}
+
+.cl-formFieldWarningText {
+	@apply text-foreground;
+}
+
+.cl-formFieldInput {
+	@apply flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 !important;
+}
+
+.cl-formButtonPrimary {
+	@apply bg-primary hover:bg-primary/90 inline-flex text-primary-foreground items-center rounded-full justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+}
+
+.cl-internal-b3fm6y {
+	@apply bg-primary;
+}
+
+.cl-internal-a81ky > p {
+	@apply text-foreground;
+}
+
+.cl-socialButtonsIconButton {
+	@apply border border-accent bg-primary/30  hover:bg-primary;
+}
+
+.editor-js-output ul,
+.editor-js-output ol {
+	@apply px-8 py-2;
+}
+
+.editor-js-output ul li {
+	@apply list-disc;
+}
+.editor-js-output ol li {
+	@apply list-decimal;
 }
