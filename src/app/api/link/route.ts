@@ -40,5 +40,14 @@ export async function GET(req: Request) {
 		);
 	} catch (error) {
 		console.log(error);
+
+		return new Response(
+			JSON.stringify({
+				success: 1,
+				meta: {
+					error,
+				},
+			})
+		);
 	}
 }
