@@ -67,7 +67,7 @@ const Searchbar: FC<Props> = ({}) => {
 							{queryResults?.map((subreddit) => (
 								<CommandItem
 									onSelect={(e) => {
-										router.push(`/r/${e}`);
+										router.push(`/${e}`);
 										router.refresh();
 									}}
 									key={subreddit.id}
