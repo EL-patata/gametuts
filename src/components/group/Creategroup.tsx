@@ -4,7 +4,7 @@ import { toast } from '@/components/ui/use-toast';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { FC, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { AiOutlineUsergroupAdd } from 'react-icons/ai';
+import { TbUsersPlus } from 'react-icons/tb';
 import { z } from 'zod';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
@@ -90,7 +90,7 @@ const Creategroup: FC<Props> = ({}) => {
 					className="h-36 resize-none bg-input"
 				/>
 				<Button type="submit" className="gap-2 mx-auto">
-					<AiOutlineUsergroupAdd className="w-6 h-6" />
+					<TbUsersPlus className="w-6 h-6" />
 					Create group
 				</Button>
 			</form>
