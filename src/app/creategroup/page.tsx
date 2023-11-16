@@ -1,3 +1,4 @@
+'use client';
 import Creategroup from '@/components/group/Creategroup';
 import { FC } from 'react';
 

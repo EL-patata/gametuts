@@ -1,4 +1,5 @@
-import { Children, FC, PropsWithChildren } from 'react';
+'use client';
+import { FC } from 'react';
 
 type Props = {
 	RightAside: React.ReactNode;

@@ -1,3 +1,4 @@
+'use client';
 import { FC, PropsWithChildren } from 'react';
 
 const SideCard: FC<PropsWithChildren> = ({ children }) => {
