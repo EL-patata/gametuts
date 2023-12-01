@@ -8,7 +8,7 @@ type Props = {};
 const page: FC<Props> = async ({}) => {
 	const user = await currentUser();
 
-	if (user) redirect(`/sign-in`);
+	if (!user) redirect(`/sign-in`);
 
 	return (
 		<main>

@@ -1,4 +1,3 @@
-'use client';
 import Editor from '@/components/editor-js/Editor';
 import { currentUser } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
